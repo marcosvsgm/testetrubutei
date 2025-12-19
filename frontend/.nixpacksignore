@@ -1,0 +1,2 @@
+# Este arquivo força o Railway a NÃO usar Docker
+# Remova ou renomeie o Dockerfile se o Railway ainda tentar usá-lo

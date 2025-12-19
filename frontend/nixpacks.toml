@@ -2,14 +2,10 @@
 nixPkgs = ['nodejs_20']
 
 [phases.install]
-cmds = [
-  'cd frontend && npm install'
-]
+cmds = ['npm ci']
 
 [phases.build]
-cmds = [
-  'cd frontend && npm run build'
-]
+cmds = ['npm run build']
 
 [start]
-cmd = 'cd frontend && npm run preview -- --host 0.0.0.0 --port ${PORT:-3000}'
+cmd = 'npm run preview -- --host 0.0.0.0 --port ${PORT:-3000}'
