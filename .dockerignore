@@ -1,0 +1,88 @@
+# ================================
+# Git
+# ================================
+.git
+.gitignore
+.gitattributes
+
+# ================================
+# Docker
+# ================================
+docker-compose.yml
+docker-compose.*.yml
+Dockerfile
+.dockerignore
+*.md
+
+# ================================
+# IDE
+# ================================
+.vscode
+.idea
+*.swp
+*.swo
+*~
+
+# ================================
+# OS
+# ================================
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ================================
+# Node.js / Frontend
+# ================================
+frontend/node_modules
+frontend/.next
+frontend/.nuxt
+frontend/dist
+frontend/build
+frontend/.cache
+frontend/.env*.local
+frontend/npm-debug.log*
+frontend/yarn-debug.log*
+frontend/yarn-error.log*
+
+# ================================
+# PHP / Laravel / Backend
+# ================================
+backend/api/vendor
+backend/api/node_modules
+backend/api/.env
+backend/api/.env.backup
+backend/api/.phpunit.result.cache
+backend/api/storage/*.key
+backend/api/storage/logs/*
+backend/api/storage/framework/cache/*
+backend/api/storage/framework/sessions/*
+backend/api/storage/framework/testing/*
+backend/api/storage/framework/views/*
+backend/api/bootstrap/cache/*
+backend/api/public/storage
+backend/api/public/hot
+backend/api/storage/api-docs/*
+
+# ================================
+# Logs e temporários
+# ================================
+*.log
+*.tmp
+*.temp
+*.cache
+.cache
+
+# ================================
+# Testes
+# ================================
+coverage
+.nyc_output
+*.lcov
+
+# ================================
+# Documentação desnecessária no build
+# ================================
+README.md
+CHANGELOG.md
+LICENSE
+*.md

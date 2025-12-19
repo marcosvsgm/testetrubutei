@@ -1,0 +1,122 @@
+/* Skeleton Loader Styles */
+.skeleton-table {
+  background: var(--bg-secondary);
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--shadow);
+  overflow: hidden;
+}
+
+.skeleton-header {
+  display: grid;
+  grid-template-columns: 50px 60px 100px 2fr 1.5fr 100px 100px 120px 180px;
+  gap: 1rem;
+  padding: 1rem 1.5rem;
+  background: var(--hover-bg);
+  border-bottom: 2px solid var(--border-color);
+}
+
+.skeleton-header-cell {
+  height: 20px;
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.skeleton-row {
+  display: grid;
+  grid-template-columns: 50px 60px 100px 2fr 1.5fr 100px 100px 120px 180px;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.skeleton-cell {
+  height: 16px;
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+/* Skeleton Cards */
+.skeleton-dashboard {
+  padding: 2rem;
+}
+
+.skeleton-cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.skeleton-card {
+  background: var(--bg-secondary);
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.skeleton-card-icon {
+  width: 48px;
+  height: 48px;
+  background: var(--border-color);
+  border-radius: 8px;
+}
+
+.skeleton-card-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.skeleton-card-label {
+  height: 14px;
+  width: 60%;
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+.skeleton-card-value {
+  height: 24px;
+  width: 40%;
+  background: var(--border-color);
+  border-radius: 4px;
+}
+
+/* Loading Button */
+.loading-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.loading-spinner-btn {
+  display: inline-block;
+  font-size: 1rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .skeleton-header {
+    display: none;
+  }
+
+  .skeleton-row {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
+  }
+
+  .skeleton-cell {
+    width: 100%;
+    height: 20px;
+  }
+
+  .skeleton-cards-grid {
+    grid-template-columns: 1fr;
+  }
+}

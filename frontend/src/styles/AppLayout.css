@@ -1,0 +1,46 @@
+.app-layout {
+  display: flex;
+  min-height: 100vh;
+  background-color: var(--bg-primary);
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 260px;
+  min-height: 100vh;
+  transition: margin-left 0.3s ease;
+  width: calc(100% - 260px);
+}
+
+/* Quando a sidebar está colapsada */
+body:has(.sidebar.collapsed) .main-content {
+  margin-left: 80px;
+  width: calc(100% - 80px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .main-content {
+    margin-left: 0;
+    width: 100%;
+    padding-top: 70px; /* Espaço para o botão hamburguer */
+  }
+  
+  body:has(.sidebar.collapsed) .main-content {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  /* Prevenir scroll quando sidebar mobile está aberta */
+  body:has(.sidebar.mobile-open) {
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 480px) {
+  .main-content {
+    padding-top: 65px;
+  }
+}
