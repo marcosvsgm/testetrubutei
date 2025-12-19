@@ -19,15 +19,20 @@ return [
 
     'allowed_methods' => ['*'],
 
-    'allowed_origins' => ['https://ingenious-quietude-production-bcfd.up.railway.app/'],
+    'allowed_origins' => [
+        'https://ingenious-quietude-production-bcfd.up.railway.app',
+        'https://testetrubutei-production-6485.up.railway.app',
+        'http://localhost:3000',
+        'http://localhost:5173'
+    ],
 
-    'allowed_origins_patterns' => [],
+    'allowed_origins_patterns' => ['/\.railway\.app$/'],
 
     'allowed_headers' => ['*'],
 
     'exposed_headers' => ['*'],
 
-    'max_age' => 0,
+    'max_age' => 600,
 
     'supports_credentials' => true,
 
