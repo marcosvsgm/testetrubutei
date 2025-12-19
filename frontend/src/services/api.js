@@ -1,13 +1,34 @@
 import axios from 'axios'
 
+// Detecta automaticamente se está em produção ou desenvolvimento
+const getApiUrl = () => {
+  // 1. Prioridade: variável de ambiente configurada no Railway
+  if (import.meta.env.VITE_API_URL) {
+    return import.meta.env.VITE_API_URL
+  }
+  
+  // 2. Se está em produção (railway.app), usa a URL do backend em produção
+  if (window.location.hostname.includes('railway.app')) {
+    return 'https://testetrubutei-production-6485.up.railway.app/api'
+  }
+  
+  // 3. Desenvolvimento local
+  return 'http://localhost:8000/api'
+}
+
 const api = axios.create({
-  baseURL: import.meta.env.VITE_API_URL || 'http://localhost:8000/api',
+  baseURL: getApiUrl(),
   headers: {
     'Content-Type': 'application/json',
     'Accept': 'application/json'
   },
   withCredentials: true
 })
+
+// Log da URL em uso (apenas em desenvolvimento)
+if (import.meta.env.DEV) {
+  console.log('🔗 API URL:', api.defaults.baseURL)
+}
 
 // Categorias
 export const getCategorias = (page = 1, search = '', perPage = 500) => {
